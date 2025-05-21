@@ -22,7 +22,7 @@ export default function Cart({ cart, removeFromCart }) {
       </ul>
       <section>
         <h3>Total Price</h3>
-        <p>${total.toFixed(2)}</p>
+        <p>£{total.toFixed(2)}</p>
         <button className="checkout" disabled={cartItems.length === 0}>Checkout</button>
       </section>
     </aside>

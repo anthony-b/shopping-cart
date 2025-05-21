@@ -88,7 +88,10 @@ button{
   transition: background-color 0.3s ease;
   
 }
-
+button[disabled], button[disabled]:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: not-allowed;
+}
 .remove-cart{
   background-color: rgb(255, 109, 109);
   padding: 5px;

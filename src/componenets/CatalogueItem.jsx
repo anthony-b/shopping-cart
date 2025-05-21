@@ -8,7 +8,7 @@ export default function CatalogueItem({ product, addToCart }) {
       <p className="supplier-name"><h4>Supplier: {product.Suppliers[0]?.CompanyName}</h4></p>
       <p>Price: £{product.UnitPrice.toFixed(2)}</p>
       <p>In Stock: {product.UnitsInStock}</p>
-      <button className='add-to-cart' onClick={() => addToCart(product)}>Add to Cart</button>
+      <button disabled={product.UnitsInStock < 1} className='add-to-cart' onClick={() => addToCart(product)}>Add to Cart</button>
     </article>
   )
 }
