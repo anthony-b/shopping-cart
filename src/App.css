@@ -1,6 +1,4 @@
-.App {
-  text-align: center;
-}
+
 
 .App-logo {
   height: 40vmin;
@@ -51,12 +49,23 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  border: 1px solid black;
   margin: 10px;
   padding: 10px;
   flex-grow: 1;
   width: 220px;           /* Set a fixed width for each product card */
   box-sizing: border-box; /* Ensure padding/border included in width */
+  border-radius: 5px;
+  background-color: #f9f9f9; /* Light background for product cards */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.2s; /* Smooth scaling effect */
+}
+
+.product-image{
+  max-width: 100%;
+  height: auto;
+}
+.supplier-name{
+  align-items: stretch ;
 }
 
 /* Add this to the parent container for products */
@@ -65,6 +74,47 @@
   flex-wrap: wrap;
   justify-content: flex-start; /* Align items to the left */
   gap: 16px;                   /* Space between product cards */
+}
+
+button{
+  margin: 10px;
+  border-radius: 5px;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  transition: background-color 0.3s ease;
+  
+}
+
+.remove-cart{
+  background-color: rgb(255, 109, 109);
+  padding: 5px;
+}
+.remove-cart:hover{
+  background-color: rgba(255, 109, 109, 0.8);
+}
+
+.checkout{
+  background-color: rgb(68, 173, 68);
+
+}
+.checkout:hover{
+  background-color: rgba(68, 173, 68, 0.8);
+
+}
+
+.add-to-cart{
+  background-color: rgb(65, 65, 223);
+
+
+}
+.add-to-cart:hover{
+  background-color: rgba(65, 65, 223, 0.8);
+
+
 }
 @keyframes App-logo-spin {
   from {

@@ -16,14 +16,14 @@ export default function Cart({ cart, removeFromCart }) {
         {cartItems.map((item) => (
           <li key={item.id}>
             {item.ProductName} (x{item.quantity}) - ${item.UnitPrice.toFixed(2)} each
-            <button onClick={() => removeFromCart(item.id)} style={{marginLeft: '8px'}}>Remove</button>
+            <button className="remove-cart" onClick={() => removeFromCart(item.id)} style={{marginLeft: '8px'}}>🗑️</button>
           </li>
         ))}
       </ul>
       <section>
         <h3>Total Price</h3>
         <p>${total.toFixed(2)}</p>
-        <button disabled={cartItems.length === 0}>Checkout</button>
+        <button className="checkout" disabled={cartItems.length === 0}>Checkout</button>
       </section>
     </aside>
   )

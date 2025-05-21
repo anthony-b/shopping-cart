@@ -24,6 +24,7 @@ export default function Catalogue({ addToCart }) {
                     <CatalogueItem
                         key={product.id}
                         name={product.name}
+                        img={product.img}
                         description={product.description}
                         price={product.price}
                         product={product}
